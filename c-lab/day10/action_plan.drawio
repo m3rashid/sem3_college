@@ -1,0 +1,97 @@
+<mxfile host="65bd71144e">
+    <diagram id="7svawP8spAQ3PQn-Rp8F" name="Page-1">
+        <mxGraphModel dx="381" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 16px&quot;&gt;FILE in some secondary storage device&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="720" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Program during runtime&lt;/font&gt;" style="label;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png;align=left;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="725" width="140" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;div style=&quot;font-size: 18px&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;FILE *&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 18px&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;(pointer to file)&lt;/font&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="850" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;exitX=0.953;exitY=0.743;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="7" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="922" as="sourcePoint"/>
+                        <mxPoint x="480" y="770" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="320" y="850"/>
+                            <mxPoint x="370" y="800"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="26" value="Challenges" style="swimlane;align=center;verticalAlign=middle;startSize=50;fontStyle=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="420" height="200" as="geometry">
+                        <mxRectangle x="40" y="40" width="90" height="23" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;font style=&quot;font-size: 20px&quot;&gt;1. The program runs in the main memory&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=20;" parent="26" vertex="1">
+                    <mxGeometry x="20" y="70" width="380" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;div style=&quot;font-size: 18px&quot;&gt;2. We cannot access the other files directly in the file system&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;font-size: 18px&quot;&gt;&lt;br style=&quot;text-align: left&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="26" vertex="1">
+                    <mxGeometry x="20" y="110" width="380" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="Plan of action" style="swimlane;align=center;verticalAlign=middle;startSize=50;fontStyle=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="277" width="750" height="343" as="geometry">
+                        <mxRectangle x="40" y="277" width="90" height="23" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="34" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 18px&quot;&gt;1. Make a pointer that points to the file in the disk&lt;/span&gt;&lt;br style=&quot;font-size: 18px&quot;&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=20;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="80" width="410" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="&lt;div style=&quot;font-size: 18px&quot;&gt;&lt;span style=&quot;text-align: left&quot;&gt;2. Specify the type of permissions required for the operation (required,&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;This is done mostly to not trigger the running of unknown scripts and not trigger the&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;antivirus / firewall or defender programs).&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;Permissions include search, read, write, create, modify. This also has subtypes&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;&#9;&#9;&lt;/span&gt;&lt;span style=&quot;text-align: left&quot;&gt;depending on the enoding of the file and the rqeuest by the program&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="33" vertex="1">
+                    <mxGeometry x="25" y="153" width="668" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;span style=&quot;font-size: 18px ; text-align: left&quot;&gt;3. Do the operations on the file (with the required permissions)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="33" vertex="1">
+                    <mxGeometry x="20" y="253" width="522" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;span style=&quot;font-size: 18px ; text-align: left&quot;&gt;4. Close the file (finalises the save step)&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" parent="33" vertex="1">
+                    <mxGeometry x="10" y="288" width="358" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="DL0m5q2kuyMzydiY9EGW" name="Page-2">
+        <mxGraphModel dx="381" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="szgDuBLH6vJRkqAwfnrh-0"/>
+                <mxCell id="szgDuBLH6vJRkqAwfnrh-1" parent="szgDuBLH6vJRkqAwfnrh-0"/>
+                <mxCell id="szgDuBLH6vJRkqAwfnrh-2" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;fopen(&quot;&amp;lt;filename&amp;gt;&quot;, &quot;&amp;lt;permission_type&amp;gt;&quot;)&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;This returns a file pointer pointing towards the file speciifed (called as file handle)&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;Permissions include &quot;r&quot; (read), &quot;rb (read in binary), &quot;w&quot; (over-writes file), &quot;wb&quot; (over-writing in binary mode), &quot;a&quot; (searches file and points the FILE* pointer to the end character in the file), &quot;r+&quot; (searches file and sets FILE* pointer to the starting character of the file) etc.&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;Assign this value to the FILE * type pointer&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="szgDuBLH6vJRkqAwfnrh-1" vertex="1">
+                    <mxGeometry x="40" y="40" width="750" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="szgDuBLH6vJRkqAwfnrh-3" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;fprintf(&quot;data&quot;)&amp;nbsp;&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;Parameters are same as the printf() function.&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;This function appends the data passed to the end of the file as it is&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="szgDuBLH6vJRkqAwfnrh-1" vertex="1">
+                    <mxGeometry x="39" y="280" width="750" height="119" as="geometry"/>
+                </mxCell>
+                <mxCell id="szgDuBLH6vJRkqAwfnrh-4" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;fclose(&amp;lt;FILE* pointer&amp;gt;)&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;Completes writing to the file (equivalent to saving the file)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="szgDuBLH6vJRkqAwfnrh-1" vertex="1">
+                    <mxGeometry x="40" y="600" width="750" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="szgDuBLH6vJRkqAwfnrh-5" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;fscanf(&amp;lt;proposed structure of file&amp;gt;)&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;Scans through the contents of the file line by line and loads the contents in the memory&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;EOF (special character that denotes the end of file)&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="szgDuBLH6vJRkqAwfnrh-1" vertex="1">
+                    <mxGeometry x="39" y="440" width="750" height="119" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="KhikyUbccVzjfP-jjKYx" name="Page-3">
+        <mxGraphModel dx="1458" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="Sz61XrcrhM095_m_UZ-4-0"/>
+                <mxCell id="Sz61XrcrhM095_m_UZ-4-1" parent="Sz61XrcrhM095_m_UZ-4-0"/>
+                <mxCell id="Sz61XrcrhM095_m_UZ-4-2" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;Delete()&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;1. Checking for same roll number because I defined it as a unique key in the program&amp;nbsp;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;2. Deleting if the roll number is present&amp;nbsp;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;3. Updating algorithm involves the following steps ---&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;span&gt;&#9;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;1. Create a temporary file&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;span&gt;&#9;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;2. Copy all the data to the new file leaving the data to be deleted&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;span&gt;&#9;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;3. Delete the original file&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;span&gt;&#9;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;4. Rename the temporary file to the original file name&#9;&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;strokeWidth=1;" parent="Sz61XrcrhM095_m_UZ-4-1" vertex="1">
+                    <mxGeometry x="40" y="200" width="750" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="Sz61XrcrhM095_m_UZ-4-3" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;Update()&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;1. Checking for same roll number because I defined it as a unique key in the program&amp;nbsp;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;2. Updating only if the roll number is present already&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;3. Updating algorithm involves the following steps ---&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;1. Create a temporary file&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;2. Copy all the data to the new file with the updated data&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;3. Delete the original file&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&lt;span style=&quot;white-space: pre&quot;&gt;&#9;&lt;/span&gt;4. Rename the temporary file to the original file name&#9;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Sz61XrcrhM095_m_UZ-4-1" vertex="1">
+                    <mxGeometry x="40" y="520" width="750" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="Sz61XrcrhM095_m_UZ-4-4" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;Display()&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;1. Iterating over the entire file character by character and printing them on the console&amp;nbsp;&lt;/font&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Sz61XrcrhM095_m_UZ-4-1" vertex="1">
+                    <mxGeometry x="40" y="840" width="750" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="Sz61XrcrhM095_m_UZ-4-5" value="&lt;h1 style=&quot;font-size: 21px&quot;&gt;&lt;font face=&quot;Courier New&quot; style=&quot;font-size: 21px&quot;&gt;Insert()&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;1. Checking for same roll number because I defined it as a unique key in the program&amp;nbsp;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 16px&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;2. Entering only if the roll number is not present already&lt;/font&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="Sz61XrcrhM095_m_UZ-4-1" vertex="1">
+                    <mxGeometry x="40" y="40" width="750" height="119" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
